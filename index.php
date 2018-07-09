@@ -1,6 +1,5 @@
 <?php
-
-session_start(); //inicia uma sessao e manipula dados de sessao. Deve ser colocado antes de qualuqer codigo
+include "servicos/servicoMensagemSessao.php";
 ?>
 
 
@@ -20,15 +19,14 @@ session_start(); //inicia uma sessao e manipula dados de sessao. Deve ser coloca
 <form action="script.php" method="post">
     <?php 
 
-        $mensagemDeSucesso = isset($_SESSION['mensagem-de-sucesso']) ? $_SESSION['mensagem-de-sucesso'] : '';
-        if(!empty($mensagemDeSucesso))
-        {
+        $mensagemDeSucesso = obterMensagemDeSucesso();
+        if(!empty($mensagemDeSucesso)){
             echo $mensagemDeSucesso;
         }
     
         //isset verifica se o valor passado foi iniciado
         //se a mensagem-de-erro da $_SESSION tiver iniciado ela vai mostrat o  valor atribuido 
-        $mensagemDeErro = isset($_SESSION['mensagem-de-erro']) ? $_SESSION['mensagem-de-erro'] : '' ;
+        $mensagemDeErro = obterMensagemDeErro();
         if(!empty($mensagemDeErro))
         {
             echo $mensagemDeErro;
