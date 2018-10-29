@@ -13,7 +13,6 @@ session_start();
         return null;
     }
 
-    
     function setarMensagemDeSucesso(string $mensagem) : void {
         $_SESSION['mensagem-de-sucesso'] = $mensagem;
     }
@@ -24,7 +23,6 @@ session_start();
 
         return null;
     }
-
 
     function removerMensagemErro():void
     {
@@ -37,6 +35,5 @@ session_start();
         //se a mensagem-de-erro tiver setado, vai eliminá-la - unset
       if(isset($_SESSION['mensagem-de-sucesso']))
       unset($_SESSION['mensagem-de-sucesso']);
-        
     }
 ?>

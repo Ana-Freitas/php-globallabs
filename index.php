@@ -2,7 +2,6 @@
 include "servicos/servicoMensagemSessao.php";
 ?>
 
-
 <!DOCTYPE html>
 <html>
 
@@ -23,7 +22,7 @@ include "servicos/servicoMensagemSessao.php";
         if(!empty($mensagemDeSucesso)){
             echo $mensagemDeSucesso;
         }
-    
+
         //isset verifica se o valor passado foi iniciado
         //se a mensagem-de-erro da $_SESSION tiver iniciado ela vai mostrat o  valor atribuido 
         $mensagemDeErro = obterMensagemDeErro();
@@ -36,7 +35,6 @@ include "servicos/servicoMensagemSessao.php";
     <p>Sua idade: <input type="text" name="idade" /></p>
     <p><input type="submit" value="Enviar dados"/></p>
 
-   
 </form>
 </body>
 </html>
