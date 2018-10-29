@@ -1,9 +1,5 @@
 <?php
 
-
-  
-
-
 function defineCategoriaCompetidor(string $nome, string $idade) : ?string
 {
     $categorias = []; //array numerico
@@ -28,7 +24,7 @@ function defineCategoriaCompetidor(string $nome, string $idade) : ?string
             }
         }
         }
-    
+
         else if($idade >= 13 && $idade <= 18)
         {
             for($i = 0; $i < count($categorias); $i++)
@@ -58,7 +54,6 @@ function defineCategoriaCompetidor(string $nome, string $idade) : ?string
         removerMensagemSucesso();
         return obterMensagemDeErro();
     }
-    
- 
+
 }
 ?>
